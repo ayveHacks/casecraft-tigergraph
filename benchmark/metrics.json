@@ -1,0 +1,7 @@
+{
+  "total_cases": 20,
+  "successful_cases": 20,
+  "total_latency_s": 24.95,
+  "avg_latency_s": 1.25,
+  "total_wall_time_s": 25.04
+}

@@ -1,0 +1,34 @@
+CREATE GRAPH CaseCraft ()
+
+// Vertices
+CREATE VERTEX Customer (PRIMARY_ID customer_id STRING) WITH primary_id_as_attribute="true"
+CREATE VERTEX Card (PRIMARY_ID card_id STRING) WITH primary_id_as_attribute="true"
+CREATE VERTEX Transaction (PRIMARY_ID transaction_id STRING, ts DATETIME, amount DOUBLE, channel STRING, risk_score DOUBLE, product_cd STRING) WITH primary_id_as_attribute="true"
+CREATE VERTEX DeviceProfile (PRIMARY_ID device_id STRING) WITH primary_id_as_attribute="true"
+CREATE VERTEX EmailDomain (PRIMARY_ID email_domain STRING) WITH primary_id_as_attribute="true"
+CREATE VERTEX BillingRegion (PRIMARY_ID region_id STRING) WITH primary_id_as_attribute="true"
+CREATE VERTEX ClosedCase (PRIMARY_ID case_id STRING, verdict STRING, pattern STRING, notes STRING) WITH primary_id_as_attribute="true"
+
+CREATE VERTEX InvestigationCase (PRIMARY_ID investigation_id STRING, status STRING, fraud_probability DOUBLE, verdict STRING, pattern STRING) WITH primary_id_as_attribute="true"
+CREATE VERTEX Evidence (PRIMARY_ID evidence_id STRING, claim STRING, source STRING, confidence DOUBLE, supporting BOOL) WITH primary_id_as_attribute="true"
+CREATE VERTEX InvestigationAction (PRIMARY_ID action_id STRING, action STRING, route STRING, reason STRING) WITH primary_id_as_attribute="true"
+
+// Edges
+CREATE DIRECTED EDGE OWNS (FROM Customer, TO Card)
+CREATE DIRECTED EDGE MADE (FROM Card, TO Transaction)
+CREATE DIRECTED EDGE FROM_DEVICE (FROM Transaction, TO DeviceProfile)
+CREATE DIRECTED EDGE PURCHASER_EMAIL (FROM Transaction, TO EmailDomain)
+CREATE DIRECTED EDGE BILLED_IN (FROM Transaction, TO BillingRegion)
+CREATE DIRECTED EDGE NEXT (FROM Transaction, TO Transaction, time_diff INT)
+CREATE DIRECTED EDGE INVOLVES (FROM ClosedCase, TO Transaction)
+CREATE DIRECTED EDGE ON_CARD (FROM ClosedCase, TO Card)
+CREATE DIRECTED EDGE CONNECTED_TO (FROM ClosedCase, TO Card)
+
+CREATE DIRECTED EDGE INVESTIGATES (FROM InvestigationCase, TO Transaction)
+CREATE DIRECTED EDGE HAS_EVIDENCE (FROM InvestigationCase, TO Evidence)
+CREATE DIRECTED EDGE RECOMMENDS (FROM InvestigationCase, TO InvestigationAction)
+CREATE DIRECTED EDGE SIMILAR_TO (FROM InvestigationCase, TO ClosedCase, similarity_score DOUBLE)
+CREATE DIRECTED EDGE CONNECTS_CARD (FROM InvestigationCase, TO Card)
+CREATE DIRECTED EDGE CONNECTS_DEVICE (FROM InvestigationCase, TO DeviceProfile)
+
+CREATE GRAPH CaseCraft (*)

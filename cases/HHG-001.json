@@ -1,0 +1,389 @@
+{
+  "case_id": "HHG-001",
+  "case": {
+    "status": "CLOSED",
+    "verdict": "LEGITIMATE",
+    "fraud_probability": 0.15,
+    "pattern": "none",
+    "pattern_description": "Routine purchase pattern matching customer history.",
+    "fingerprint": {
+      "transaction_burst": false,
+      "device_novelty": false,
+      "card_testing_signal": false
+    },
+    "affected_txn_ids": [],
+    "first_suspicious_txn_id": null,
+    "connected_card_ids": [
+      9751
+    ],
+    "connected_device_profiles": [],
+    "exposure_usd": 0.0,
+    "evidence": [
+      {
+        "claim": "Routine transaction of $7.41",
+        "source": "TigerGraph",
+        "query": "get_transaction",
+        "type": "SUPPORTING",
+        "confidence": 0.9
+      }
+    ],
+    "similar_prior_cases": [
+      {
+        "case_id": "CC-0137",
+        "customer_id": "C12982",
+        "card_id": "C12982-K1",
+        "opened_at": "2016-07-06 09:33:41",
+        "closed_at": "2016-07-11 03:33:41",
+        "outcome": "confirmed_fraud",
+        "pattern": "card_testing",
+        "first_fraud_txn_id": "3000196",
+        "txn_ids": "3000196|3003954|3009763|3009897|3009912",
+        "n_txns": "5",
+        "exposure_usd": "402.43",
+        "connected_card_ids": "",
+        "actions_taken": "CREATE_CASE|BLOCK_CARD",
+        "report_filed": "No",
+        "analyst_notes": "Case CC-0137: cardholder C12982 reported unrecognized activity on card C12982-K1. 5 transaction(s) between 2016-07-02 and 2016-07-05 totaling $402.43 were confirmed fraudulent. A run of very small online authorizations followed by a larger purchase, consistent with testing a stolen card number before use. Online transactions came from a Windows on chrome 61.0. Card blocked and reissued. Customer reimbursed."
+      },
+      {
+        "case_id": "CC-0290",
+        "customer_id": "C11923",
+        "card_id": "C11923-K2",
+        "opened_at": "2016-07-09 19:59:09",
+        "closed_at": "2016-07-10 23:59:09",
+        "outcome": "confirmed_fraud",
+        "pattern": "card_testing",
+        "first_fraud_txn_id": "3009374",
+        "txn_ids": "3009374|3011289|3015408|3015422|3017329|3020058|3022349|3023880",
+        "n_txns": "8",
+        "exposure_usd": "144.56",
+        "connected_card_ids": "",
+        "actions_taken": "CREATE_CASE|BLOCK_CARD",
+        "report_filed": "No",
+        "analyst_notes": "Case CC-0290: cardholder C11923 reported unrecognized activity on card C11923-K2. 8 transaction(s) between 2016-07-05 and 2016-07-08 totaling $144.56 were confirmed fraudulent. A run of very small online authorizations followed by a larger purchase, consistent with testing a stolen card number before use. Card blocked and reissued. Customer reimbursed."
+      },
+      {
+        "case_id": "CC-0370",
+        "customer_id": "C12982",
+        "card_id": "C12982-K1",
+        "opened_at": "2016-07-11 08:50:59",
+        "closed_at": "2016-07-16 20:50:59",
+        "outcome": "confirmed_fraud",
+        "pattern": "card_testing",
+        "first_fraud_txn_id": "3030014",
+        "txn_ids": "3030014|3030042|3030311|3030361|3030371|3030384|3030528|3030537|3030620|3030625",
+        "n_txns": "10",
+        "exposure_usd": "426.72",
+        "connected_card_ids": "",
+        "actions_taken": "CREATE_CASE|BLOCK_CARD",
+        "report_filed": "No",
+        "analyst_notes": "Case CC-0370: cardholder C12982 reported unrecognized activity on card C12982-K1. 10 transaction(s) between 2016-07-10 and 2016-07-10 totaling $426.72 were confirmed fraudulent. A run of very small online authorizations followed by a larger purchase, consistent with testing a stolen card number before use. Card blocked and reissued. Customer reimbursed."
+      },
+      {
+        "case_id": "CC-1235",
+        "customer_id": "C08962",
+        "card_id": "C08962-K2",
+        "opened_at": "2016-07-26 19:03:45",
+        "closed_at": "2016-07-29 23:03:45",
+        "outcome": "confirmed_fraud",
+        "pattern": "card_testing",
+        "first_fraud_txn_id": "3046235",
+        "txn_ids": "3046235|3053612|3057241|3060578|3060629|3063441|3064369|3066309|3066657|3066684|3066895|3069530|3076657|3082128|3083865|3084416|3087013|3091307|3093024|3094046|3103530",
+        "n_txns": "21",
+        "exposure_usd": "1030.15",
+        "connected_card_ids": "",
+        "actions_taken": "CREATE_CASE|BLOCK_CARD|FILE_REPORT",
+        "report_filed": "Yes",
+        "analyst_notes": "Case CC-1235: cardholder C08962 reported unrecognized activity on card C08962-K2. 21 transaction(s) between 2016-07-14 and 2016-07-25 totaling $1,030.15 were confirmed fraudulent. A run of very small online authorizations followed by a larger purchase, consistent with testing a stolen card number before use. Online transactions came from a Windows on chrome 63.0. Card blocked and reissued. Customer reimbursed."
+      },
+      {
+        "case_id": "CC-1242",
+        "customer_id": "C11847",
+        "card_id": "C11847-K2",
+        "opened_at": "2016-07-26 22:21:17",
+        "closed_at": "2016-07-29 15:21:17",
+        "outcome": "confirmed_fraud",
+        "pattern": "card_testing",
+        "first_fraud_txn_id": "3033677",
+        "txn_ids": "3033677|3033785|3036775|3039436|3043166|3046099|3047589|3049742|3057355|3063616|3068270|3069837|3075684|3076404|3080155|3082312|3084283|3084536|3088503|3091496|3091549|3093354|3093365|3093681|3099623|3100354|3102060|3102279|3102787|3105131|3106022",
+        "n_txns": "31",
+        "exposure_usd": "1421.21",
+        "connected_card_ids": "",
+        "actions_taken": "CREATE_CASE|BLOCK_CARD|FILE_REPORT",
+        "report_filed": "Yes",
+        "analyst_notes": "Case CC-1242: cardholder C11847 reported unrecognized activity on card C11847-K2. 31 transaction(s) between 2016-07-11 and 2016-07-26 totaling $1,421.21 were confirmed fraudulent. A run of very small online authorizations followed by a larger purchase, consistent with testing a stolen card number before use. Online transactions came from a Windows on chrome 63.0. Card blocked and reissued. Customer reimbursed."
+      },
+      {
+        "case_id": "CC-2247",
+        "customer_id": "C11923",
+        "card_id": "C11923-K2",
+        "opened_at": "2016-08-17 14:07:24",
+        "closed_at": "2016-08-21 19:07:24",
+        "outcome": "confirmed_fraud",
+        "pattern": "card_testing",
+        "first_fraud_txn_id": "3103128",
+        "txn_ids": "3103128|3103840|3105307|3107103|3107222|3107272|3108201|3110562|3112024|3112443|3112469|3112492|3112619|3112633|3115350|3115368|3115540|3115541|3115556|3116598|3116633|3120105|3120848|3122525|3122913|3122940|3123793|3124057|3124062|3126430|3126462|3126630|3127810|3127879|3129905|3131142|3135973|3136623|3136967|3136983|3137009|3137056|3139688|3142913|3145228|3145244|3147966|3148124|3149626|3149704|3152296|3154589|3154618|3154621|3154637|3154869|3155100|3156116|3156137|3156171|3158070|3163015|3164850|3167028|3167097|3169089|3169102|3169155|3169159|3174243|3179879",
+        "n_txns": "71",
+        "exposure_usd": "4886.18",
+        "connected_card_ids": "",
+        "actions_taken": "CREATE_CASE|BLOCK_CARD|FILE_REPORT",
+        "report_filed": "Yes",
+        "analyst_notes": "Case CC-2247: cardholder C11923 reported unrecognized activity on card C11923-K2. 71 transaction(s) between 2016-07-25 and 2016-08-16 totaling $4,886.18 were confirmed fraudulent. A run of very small online authorizations followed by a larger purchase, consistent with testing a stolen card number before use. Online transactions came from a Windows on chrome 63.0. Card blocked and reissued. Customer reimbursed."
+      },
+      {
+        "case_id": "CC-2248",
+        "customer_id": "C07562",
+        "card_id": "C07562-K2",
+        "opened_at": "2016-08-17 14:46:43",
+        "closed_at": "2016-08-22 01:46:43",
+        "outcome": "confirmed_fraud",
+        "pattern": "card_testing",
+        "first_fraud_txn_id": "3060719",
+        "txn_ids": "3060719|3067350|3076344|3082329|3090432|3090438|3092305|3093503|3095708|3101433|3101836|3110921|3116156|3118589|3118866|3119767|3119775|3123751|3127764|3129562|3130502|3131984|3133428|3134439|3137607|3137820|3141393|3144971|3146746|3151217|3151489|3151499|3151562|3151564|3151566|3151568|3151570|3152213|3152276|3152977|3157233|3158226|3158243|3158452|3161185|3162447|3164290|3164295|3164296|3164297|3164301|3164303|3164305|3166935|3168129|3169847|3169864|3172916|3174531|3175745|3177090|3178420|3178483|3178641|3181275",
+        "n_txns": "65",
+        "exposure_usd": "3876.20",
+        "connected_card_ids": "",
+        "actions_taken": "CREATE_CASE|BLOCK_CARD|FILE_REPORT",
+        "report_filed": "Yes",
+        "analyst_notes": "Case CC-2248: cardholder C07562 reported unrecognized activity on card C07562-K2. 65 transaction(s) between 2016-07-17 and 2016-08-17 totaling $3,876.20 were confirmed fraudulent. A run of very small online authorizations followed by a larger purchase, consistent with testing a stolen card number before use. Online transactions came from a Windows on chrome 63.0. Card blocked and reissued. Customer reimbursed."
+      },
+      {
+        "case_id": "CC-2394",
+        "customer_id": "C08962",
+        "card_id": "C08962-K2",
+        "opened_at": "2016-08-20 18:45:23",
+        "closed_at": "2016-08-24 16:45:23",
+        "outcome": "confirmed_fraud",
+        "pattern": "card_testing",
+        "first_fraud_txn_id": "3128855",
+        "txn_ids": "3128855|3129757|3136012|3140826|3140857|3140882|3141204|3141288|3141298|3141852|3143144|3143769|3143833|3144645|3144670|3144710|3144771|3144775|3144825|3144846|3144857|3144908|3144911|3144956|3144966|3145373|3145640|3145643|3146947|3147936|3151224|3156076|3157612|3157627|3160413|3163830|3166596|3166633|3166713|3166755|3169442|3169448|3171083|3171139|3172051|3172504|3173804|3173983|3174981|3177419|3177519|3180234|3180577|3180896|3181018|3181272|3182425|3183671|3183695|3185708|3185796|3187679|3188424|3190311|3191105",
+        "n_txns": "65",
+        "exposure_usd": "2634.94",
+        "connected_card_ids": "",
+        "actions_taken": "CREATE_CASE|BLOCK_CARD|FILE_REPORT",
+        "report_filed": "Yes",
+        "analyst_notes": "Case CC-2394: cardholder C08962 reported unrecognized activity on card C08962-K2. 65 transaction(s) between 2016-07-31 and 2016-08-20 totaling $2,634.94 were confirmed fraudulent. A run of very small online authorizations followed by a larger purchase, consistent with testing a stolen card number before use. Online transactions came from a Windows on chrome 63.0. Card blocked and reissued. Customer reimbursed."
+      },
+      {
+        "case_id": "CC-2643",
+        "customer_id": "C05307",
+        "card_id": "C05307-K2",
+        "opened_at": "2016-08-27 03:08:26",
+        "closed_at": "2016-08-31 23:08:26",
+        "outcome": "confirmed_fraud",
+        "pattern": "card_testing",
+        "first_fraud_txn_id": "3194584",
+        "txn_ids": "3194584|3198003|3198014|3198028|3198036|3198114|3198258|3198263|3198291|3198360|3201707|3206697",
+        "n_txns": "12",
+        "exposure_usd": "508.82",
+        "connected_card_ids": "",
+        "actions_taken": "CREATE_CASE|BLOCK_CARD",
+        "report_filed": "No",
+        "analyst_notes": "Case CC-2643: cardholder C05307 reported unrecognized activity on card C05307-K2. 12 transaction(s) between 2016-08-21 and 2016-08-25 totaling $508.82 were confirmed fraudulent. A run of very small online authorizations followed by a larger purchase, consistent with testing a stolen card number before use. Online transactions came from a SM-J701M Build/NRD90M on chrome 63.0 for android. Card blocked and reissued. Customer reimbursed."
+      },
+      {
+        "case_id": "CC-2673",
+        "customer_id": "C11923",
+        "card_id": "C11923-K2",
+        "opened_at": "2016-08-27 18:54:07",
+        "closed_at": "2016-09-02 06:54:07",
+        "outcome": "confirmed_fraud",
+        "pattern": "card_testing",
+        "first_fraud_txn_id": "3186138",
+        "txn_ids": "3186138|3186160|3186448|3187009|3187050|3188317|3188386|3189940|3193275|3194839|3194942|3196129|3196157|3196538|3196540|3196886|3198442|3198938|3199813|3199827|3199856|3200333|3200410|3204764|3207341|3207390|3208778|3209214|3209716|3209784|3210458|3210460|3210467",
+        "n_txns": "33",
+        "exposure_usd": "1334.96",
+        "connected_card_ids": "",
+        "actions_taken": "CREATE_CASE|BLOCK_CARD|FILE_REPORT",
+        "report_filed": "Yes",
+        "analyst_notes": "Case CC-2673: cardholder C11923 reported unrecognized activity on card C11923-K2. 33 transaction(s) between 2016-08-18 and 2016-08-27 totaling $1,334.96 were confirmed fraudulent. A run of very small online authorizations followed by a larger purchase, consistent with testing a stolen card number before use. Card blocked and reissued. Customer reimbursed."
+      },
+      {
+        "case_id": "CC-3653",
+        "customer_id": "C05381",
+        "card_id": "C05381-K2",
+        "opened_at": "2016-09-18 18:07:06",
+        "closed_at": "2016-09-24 04:07:06",
+        "outcome": "confirmed_fraud",
+        "pattern": "card_testing",
+        "first_fraud_txn_id": "3259393",
+        "txn_ids": "3259393|3259450|3259666|3263868|3263892|3264507|3268930|3268959|3273893|3275689|3277686",
+        "n_txns": "11",
+        "exposure_usd": "496.34",
+        "connected_card_ids": "",
+        "actions_taken": "CREATE_CASE|BLOCK_CARD",
+        "report_filed": "No",
+        "analyst_notes": "Case CC-3653: cardholder C05381 reported unrecognized activity on card C05381-K2. 11 transaction(s) between 2016-09-12 and 2016-09-18 totaling $496.34 were confirmed fraudulent. A run of very small online authorizations followed by a larger purchase, consistent with testing a stolen card number before use. Online transactions came from a es-us on Lanix/Ilium. Card blocked and reissued. Customer reimbursed."
+      },
+      {
+        "case_id": "CC-4058",
+        "customer_id": "C04597",
+        "card_id": "C04597-K2",
+        "opened_at": "2016-09-28 02:12:07",
+        "closed_at": "2016-09-29 16:12:07",
+        "outcome": "confirmed_fraud",
+        "pattern": "card_testing",
+        "first_fraud_txn_id": "3292064",
+        "txn_ids": "3292064|3293335|3293701|3293989|3294045|3295903|3295953|3295964|3295993|3299703|3300634|3304161|3304743",
+        "n_txns": "13",
+        "exposure_usd": "390.38",
+        "connected_card_ids": "",
+        "actions_taken": "CREATE_CASE|BLOCK_CARD",
+        "report_filed": "No",
+        "analyst_notes": "Case CC-4058: cardholder C04597 reported unrecognized activity on card C04597-K2. 13 transaction(s) between 2016-09-23 and 2016-09-27 totaling $390.38 were confirmed fraudulent. A run of very small online authorizations followed by a larger purchase, consistent with testing a stolen card number before use. Online transactions came from a CHC-U03 Build/HuaweiCHC-U03 on chrome generic. Card blocked and reissued. Customer reimbursed."
+      },
+      {
+        "case_id": "CC-4225",
+        "customer_id": "C05381",
+        "card_id": "C05381-K2",
+        "opened_at": "2016-10-01 16:19:42",
+        "closed_at": "2016-10-03 10:19:42",
+        "outcome": "confirmed_fraud",
+        "pattern": "card_testing",
+        "first_fraud_txn_id": "3300796",
+        "txn_ids": "3300796|3303046|3304083|3304136|3304163|3304166|3304201|3308539|3308553|3311054|3318029|3318059|3318061",
+        "n_txns": "13",
+        "exposure_usd": "352.58",
+        "connected_card_ids": "",
+        "actions_taken": "CREATE_CASE|BLOCK_CARD",
+        "report_filed": "No",
+        "analyst_notes": "Case CC-4225: cardholder C05381 reported unrecognized activity on card C05381-K2. 13 transaction(s) between 2016-09-26 and 2016-10-01 totaling $352.58 were confirmed fraudulent. A run of very small online authorizations followed by a larger purchase, consistent with testing a stolen card number before use. Card blocked and reissued. Customer reimbursed."
+      },
+      {
+        "case_id": "CC-4501",
+        "customer_id": "C11923",
+        "card_id": "C11923-K2",
+        "opened_at": "2016-10-07 12:05:47",
+        "closed_at": "2016-10-11 15:05:47",
+        "outcome": "confirmed_fraud",
+        "pattern": "card_testing",
+        "first_fraud_txn_id": "3302336",
+        "txn_ids": "3302336|3308522|3308562|3308616|3308868|3309553|3310510|3310512|3313166|3315275|3317939|3317948|3317954|3317956|3317959|3318049|3319832|3319913|3326416|3332442|3334086|3336192|3337324|3337374|3338428|3338446|3338472|3338475",
+        "n_txns": "28",
+        "exposure_usd": "1508.58",
+        "connected_card_ids": "",
+        "actions_taken": "CREATE_CASE|BLOCK_CARD|FILE_REPORT",
+        "report_filed": "Yes",
+        "analyst_notes": "Case CC-4501: cardholder C11923 reported unrecognized activity on card C11923-K2. 28 transaction(s) between 2016-09-26 and 2016-10-06 totaling $1,508.58 were confirmed fraudulent. A run of very small online authorizations followed by a larger purchase, consistent with testing a stolen card number before use. Card blocked and reissued. Customer reimbursed."
+      },
+      {
+        "case_id": "CC-4940",
+        "customer_id": "C03738",
+        "card_id": "C03738-K2",
+        "opened_at": "2016-10-17 12:43:27",
+        "closed_at": "2016-10-22 22:43:27",
+        "outcome": "confirmed_fraud",
+        "pattern": "card_testing",
+        "first_fraud_txn_id": "3366168",
+        "txn_ids": "3366168|3371098|3371138",
+        "n_txns": "3",
+        "exposure_usd": "109.88",
+        "connected_card_ids": "",
+        "actions_taken": "CREATE_CASE|BLOCK_CARD",
+        "report_filed": "No",
+        "analyst_notes": "Case CC-4940: cardholder C03738 reported unrecognized activity on card C03738-K2. 3 transaction(s) between 2016-10-15 and 2016-10-16 totaling $109.88 were confirmed fraudulent. A run of very small online authorizations followed by a larger purchase, consistent with testing a stolen card number before use. Online transactions came from a Windows on chrome 64.0. Card blocked and reissued. Customer reimbursed."
+      },
+      {
+        "case_id": "CC-5187",
+        "customer_id": "C08962",
+        "card_id": "C08962-K2",
+        "opened_at": "2016-10-23 14:42:50",
+        "closed_at": "2016-10-28 05:42:50",
+        "outcome": "confirmed_fraud",
+        "pattern": "card_testing",
+        "first_fraud_txn_id": "3330484",
+        "txn_ids": "3330484|3330488|3333770|3333790|3333794|3334044|3334048|3337226|3338719|3344400|3344489|3344581|3344586|3344713|3347986|3348876|3352534|3352892|3352947|3352974|3359011|3360338|3366222|3369185|3369187|3369191|3373885|3373943|3374181|3378069|3383707|3385433|3385456|3388229|3389045|3389912|3389924",
+        "n_txns": "37",
+        "exposure_usd": "846.62",
+        "connected_card_ids": "",
+        "actions_taken": "CREATE_CASE|BLOCK_CARD",
+        "report_filed": "No",
+        "analyst_notes": "Case CC-5187: cardholder C08962 reported unrecognized activity on card C08962-K2. 37 transaction(s) between 2016-10-04 and 2016-10-23 totaling $846.62 were confirmed fraudulent. A run of very small online authorizations followed by a larger purchase, consistent with testing a stolen card number before use. Card blocked and reissued. Customer reimbursed."
+      }
+    ],
+    "summary": "Investigation complete. Policy actions recommended.",
+    "written_to_graph": true,
+    "graph_case_id": "GRAPH_HHG-001"
+  },
+  "hypotheses": [
+    {
+      "hypothesis": "legitimate_activity",
+      "supporting_evidence": [
+        "Small amount, routine purchase"
+      ],
+      "contradicting_evidence": [],
+      "current_confidence": 0.9,
+      "evidence_gaps": []
+    }
+  ],
+  "evidence_requests": [],
+  "next_best_actions": {
+    "initial": [
+      "ALLOW_TRANSACTION"
+    ],
+    "final": [
+      "ALLOW_TRANSACTION"
+    ],
+    "what_changed": "No change",
+    "detailed_actions": [
+      {
+        "action": "ALLOW_TRANSACTION",
+        "route": "AUTO",
+        "reason": "Low probability"
+      }
+    ]
+  },
+  "sar": {
+    "file": false,
+    "narrative": "",
+    "reason": "Policy conditions not met.",
+    "subjects": [],
+    "total_amount_usd": 0,
+    "activity_dates": []
+  },
+  "timeline": [
+    {
+      "step": 1,
+      "event": "TRIGGER_RECEIVED",
+      "details": "Investigation triggered for case HHG-001"
+    },
+    {
+      "step": 2,
+      "event": "GRAPH_RETRIEVAL",
+      "details": "Querying get_transaction(3000010) via MCP"
+    },
+    {
+      "step": 3,
+      "event": "GRAPH_RETRIEVAL",
+      "details": "Retrieved 1 prior card transactions and 16 similar closed cases"
+    },
+    {
+      "step": 4,
+      "event": "PATTERN_ANALYSIS",
+      "details": "LLM generating hypotheses and evaluating counter-evidence"
+    },
+    {
+      "step": 8,
+      "event": "POLICY_EVALUATION",
+      "details": "Evaluating R1-R10 rules engine"
+    },
+    {
+      "step": 10,
+      "event": "CASE_MEMORY_WRITE",
+      "details": "InvestigationCase HHG-001 written to TigerGraph memory."
+    },
+    {
+      "step": 11,
+      "event": "INVESTIGATION_STOPPED",
+      "details": "Fraud probability stabilized and policy executed."
+    }
+  ],
+  "stop_reason": "Policy actions executed.",
+  "tool_calls": [
+    "get_transaction",
+    "get_card_history",
+    "find_similar_cases"
+  ],
+  "tokens": 1500,
+  "latency_s": 0.64
+}

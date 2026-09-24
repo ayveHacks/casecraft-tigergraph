@@ -1,0 +1,142 @@
+[
+  {
+    "case_id": "HHG-001",
+    "status": "SUCCESS",
+    "fraud_probability": 0.15,
+    "verdict": "LEGITIMATE",
+    "latency_s": 0.64
+  },
+  {
+    "case_id": "HHG-002",
+    "status": "SUCCESS",
+    "fraud_probability": 0.01,
+    "verdict": "LEGITIMATE",
+    "latency_s": 0.63
+  },
+  {
+    "case_id": "HHG-003",
+    "status": "SUCCESS",
+    "fraud_probability": 0.01,
+    "verdict": "LEGITIMATE",
+    "latency_s": 0.64
+  },
+  {
+    "case_id": "HHG-004",
+    "status": "SUCCESS",
+    "fraud_probability": 0.01,
+    "verdict": "LEGITIMATE",
+    "latency_s": 0.64
+  },
+  {
+    "case_id": "HHG-005",
+    "status": "SUCCESS",
+    "fraud_probability": 0.99,
+    "verdict": "FRAUD",
+    "latency_s": 0.6
+  },
+  {
+    "case_id": "HHG-006",
+    "status": "SUCCESS",
+    "fraud_probability": 0.01,
+    "verdict": "LEGITIMATE",
+    "latency_s": 1.9
+  },
+  {
+    "case_id": "HHG-007",
+    "status": "SUCCESS",
+    "fraud_probability": 0.01,
+    "verdict": "LEGITIMATE",
+    "latency_s": 0.93
+  },
+  {
+    "case_id": "HHG-008",
+    "status": "SUCCESS",
+    "fraud_probability": 0.15,
+    "verdict": "LEGITIMATE",
+    "latency_s": 0.7
+  },
+  {
+    "case_id": "HHG-009",
+    "status": "SUCCESS",
+    "fraud_probability": 0.01,
+    "verdict": "LEGITIMATE",
+    "latency_s": 1.87
+  },
+  {
+    "case_id": "HHG-010",
+    "status": "SUCCESS",
+    "fraud_probability": 0.15,
+    "verdict": "LEGITIMATE",
+    "latency_s": 2.18
+  },
+  {
+    "case_id": "HHG-011",
+    "status": "SUCCESS",
+    "fraud_probability": 0.15,
+    "verdict": "LEGITIMATE",
+    "latency_s": 1.29
+  },
+  {
+    "case_id": "HHG-012",
+    "status": "SUCCESS",
+    "fraud_probability": 0.15,
+    "verdict": "LEGITIMATE",
+    "latency_s": 1.27
+  },
+  {
+    "case_id": "HHG-013",
+    "status": "SUCCESS",
+    "fraud_probability": 0.15,
+    "verdict": "LEGITIMATE",
+    "latency_s": 1.76
+  },
+  {
+    "case_id": "HHG-014",
+    "status": "SUCCESS",
+    "fraud_probability": 0.99,
+    "verdict": "FRAUD",
+    "latency_s": 1.39
+  },
+  {
+    "case_id": "HHG-015",
+    "status": "SUCCESS",
+    "fraud_probability": 0.01,
+    "verdict": "LEGITIMATE",
+    "latency_s": 1.25
+  },
+  {
+    "case_id": "HHG-016",
+    "status": "SUCCESS",
+    "fraud_probability": 0.15,
+    "verdict": "LEGITIMATE",
+    "latency_s": 1.7
+  },
+  {
+    "case_id": "HHG-017",
+    "status": "SUCCESS",
+    "fraud_probability": 0.01,
+    "verdict": "LEGITIMATE",
+    "latency_s": 1.44
+  },
+  {
+    "case_id": "HHG-018",
+    "status": "SUCCESS",
+    "fraud_probability": 0.99,
+    "verdict": "FRAUD",
+    "latency_s": 1.26
+  },
+  {
+    "case_id": "HHG-019",
+    "status": "SUCCESS",
+    "fraud_probability": 0.15,
+    "verdict": "LEGITIMATE",
+    "latency_s": 1.27
+  },
+  {
+    "case_id": "HHG-020",
+    "status": "SUCCESS",
+    "fraud_probability": 0.15,
+    "verdict": "LEGITIMATE",
+    "latency_s": 1.59
+  }
+]

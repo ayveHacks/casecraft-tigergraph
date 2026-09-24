@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pydantic
+pandas
+polars
+python-dotenv
+pytest
+requests
+pyTigerGraph
