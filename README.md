@@ -169,3 +169,5 @@ Please view the `docs/` folder for deeper technical insights into the Agent arch
 
 ## Team Information
 - **Owner**: Ayush Verma (ayveHacks)
+- **Contributor**: Harsh Vardhan Chaudhary
+- **Contributor**: Priyanshu Raman
