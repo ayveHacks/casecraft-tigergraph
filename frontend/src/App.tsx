@@ -3,20 +3,22 @@ import { Activity, AlertTriangle, ShieldCheck, FileText, Search, Maximize2, Hist
 import { ReactFlow, Background, Controls } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 
+const API_BASE = import.meta.env.PROD ? '' : 'http://localhost:8000';
+
 export default function App() {
   const [cases, setCases] = useState<string[]>([]);
   const [selectedCase, setSelectedCase] = useState<any>(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/cases')
+    fetch(`${API_BASE}/api/cases`)
       .then(res => res.json())
       .then(data => setCases(data.cases || []))
       .catch(err => console.log('Error fetching cases', err));
   }, []);
 
   const loadCase = (caseId: string) => {
-    fetch(`http://localhost:8000/api/cases/${caseId}`)
+    fetch(`${API_BASE}/api/cases/${caseId}`)
       .then(res => res.json())
       .then(data => setSelectedCase(data))
       .catch(err => console.log('Error loading case', err));
